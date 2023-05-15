@@ -1,4 +1,4 @@
-# Strapi Upload Provider for Digital Ocean Spaces
+# Strapi Upload Provider for CloudPRO
 
 This provider will upload to the space using the CloudPRO API.
 
