@@ -13,7 +13,9 @@ module.exports = {
       upload(file) {
         const formData = new FormData();
         formData.append("name", file.name);
-        formData.append("file", file.buffer, { filename: file.name });
+        formData.append("file", new Blob([file.buffer]), {
+          filename: file.name,
+        });
 
         return client.post("/box", formData).then((response) => {
           file.hash = response.data.key;
