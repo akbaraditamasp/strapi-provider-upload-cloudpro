@@ -1,4 +1,5 @@
 const { default: axios } = require("axios");
+const FormData = require("form-data");
 
 module.exports = {
   init(providerOptions) {
@@ -13,7 +14,7 @@ module.exports = {
       upload(file) {
         const formData = new FormData();
         formData.append("name", file.name);
-        formData.append("file", new Blob([file.buffer]), {
+        formData.append("file", file.buffer, {
           filename: file.name,
         });
 
