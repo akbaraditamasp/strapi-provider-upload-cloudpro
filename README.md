@@ -21,7 +21,7 @@ module.exports = ({ env }) => ({
   // ...
   upload: {
     config: {
-      provider: "strapi-provider-upload-do",
+      provider: "strapi-provider-upload-cloudpro",
       providerOptions: {
         boxToken: env("PRO_BOX_TOKEN"),
       },
