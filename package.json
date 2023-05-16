@@ -1,6 +1,6 @@
 {
   "name": "strapi-provider-upload-cloudpro",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "CloudPRO Upload Provider for Strapi",
   "main": "index.js",
   "scripts": {

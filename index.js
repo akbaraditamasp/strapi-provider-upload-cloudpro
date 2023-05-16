@@ -17,9 +17,11 @@ module.exports = {
         formData.append("file", file.buffer, {
           filename: file.name,
         });
+        formData.append("isPublic", true);
 
         return client.post("/box", formData).then((response) => {
           file.hash = response.data.key;
+          file.url = response.data.url;
 
           return file;
         });
@@ -29,13 +31,8 @@ module.exports = {
           return;
         });
       },
-      getSignedUrl(file) {
-        return client.get("/box/" + file.hash).then((response) => {
-          return response.data;
-        });
-      },
       isPrivate() {
-        return true;
+        return false;
       },
     };
   },
