@@ -17,7 +17,7 @@ module.exports = {
         formData.append("file", file.buffer, {
           filename: file.name,
         });
-        formData.append("isPublic", true);
+        formData.append("isPublic", "true");
 
         return client.post("/box", formData).then((response) => {
           file.hash = response.data.key;
